@@ -1,0 +1,20 @@
+title @s[scores={timer_wood=0}] actionbar [{"translate": "cc.ab.timer.wood.1"}]
+title @s[scores={timer_wood=2}] actionbar [{"translate": "cc.ab.timer.wood.2"}]
+title @s[scores={timer_wood=4}] actionbar [{"translate": "cc.ab.timer.wood.3"}]
+title @s[scores={timer_wood=6}] actionbar [{"translate": "cc.ab.timer.wood.4"}]
+title @s[scores={timer_wood=8}] actionbar [{"translate": "cc.ab.timer.wood.5"}]
+title @s[scores={timer_wood=10}] actionbar [{"translate": "cc.ab.timer.wood.6"}]
+title @s[scores={timer_wood=12}] actionbar [{"translate": "cc.ab.timer.wood.7"}]
+title @s[scores={timer_wood=14}] actionbar [{"translate": "cc.ab.timer.wood.8"}]
+title @s[scores={timer_wood=16}] actionbar [{"translate": "cc.ab.timer.wood.9"}]
+title @s[scores={timer_wood=18}] actionbar [{"translate": "cc.ab.timer.wood.10"}]
+title @s[scores={timer_wood=20}] actionbar [{"translate": "cc.ab.timer.wood.11"}]
+title @s[scores={timer_wood=22}] actionbar [{"translate": "cc.ab.timer.wood.12"}]
+title @s[scores={timer_wood=24}] actionbar [{"translate": "cc.ab.timer.wood.13"}]
+title @s[scores={timer_wood=26}] actionbar [{"translate": "cc.ab.timer.wood.14"}]
+title @s[scores={timer_wood=28}] actionbar [{"translate": "cc.ab.timer.wood.15"}]
+title @s[scores={timer_wood=30}] actionbar [{"translate": "cc.ab.timer.wood.16"}]
+title @s[scores={timer_wood=32}] actionbar [{"translate": "cc.ab.timer.wood.17"}]
+scoreboard players add @s timer_wood 1
+give @s[scores={timer_wood=34}] minecraft:oak_planks
+scoreboard players set @s[scores={timer_wood=34..}] timer_wood 0

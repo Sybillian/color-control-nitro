@@ -1,0 +1,20 @@
+title @s[scores={timer_tnt=0}] actionbar [{"translate": "cc.ab.timer.tnt.1"}]
+title @s[scores={timer_tnt=4}] actionbar [{"translate": "cc.ab.timer.tnt.2"}]
+title @s[scores={timer_tnt=8}] actionbar [{"translate": "cc.ab.timer.tnt.3"}]
+title @s[scores={timer_tnt=12}] actionbar [{"translate": "cc.ab.timer.tnt.4"}]
+title @s[scores={timer_tnt=16}] actionbar [{"translate": "cc.ab.timer.tnt.5"}]
+title @s[scores={timer_tnt=20}] actionbar [{"translate": "cc.ab.timer.tnt.6"}]
+title @s[scores={timer_tnt=24}] actionbar [{"translate": "cc.ab.timer.tnt.7"}]
+title @s[scores={timer_tnt=28}] actionbar [{"translate": "cc.ab.timer.tnt.8"}]
+title @s[scores={timer_tnt=32}] actionbar [{"translate": "cc.ab.timer.tnt.9"}]
+title @s[scores={timer_tnt=36}] actionbar [{"translate": "cc.ab.timer.tnt.10"}]
+title @s[scores={timer_tnt=40}] actionbar [{"translate": "cc.ab.timer.tnt.11"}]
+title @s[scores={timer_tnt=44}] actionbar [{"translate": "cc.ab.timer.tnt.12"}]
+title @s[scores={timer_tnt=48}] actionbar [{"translate": "cc.ab.timer.tnt.13"}]
+title @s[scores={timer_tnt=52}] actionbar [{"translate": "cc.ab.timer.tnt.14"}]
+title @s[scores={timer_tnt=56}] actionbar [{"translate": "cc.ab.timer.tnt.15"}]
+title @s[scores={timer_tnt=60}] actionbar [{"translate": "cc.ab.timer.tnt.16"}]
+title @s[scores={timer_tnt=64}] actionbar [{"translate": "cc.ab.timer.tnt.17"}]
+scoreboard players add @s timer_tnt 1
+give @s[scores={timer_tnt=68}] minecraft:tnt
+scoreboard players set @s[scores={timer_tnt=68..}] timer_tnt 0

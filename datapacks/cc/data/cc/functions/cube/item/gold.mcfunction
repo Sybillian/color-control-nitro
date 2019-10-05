@@ -1,0 +1,20 @@
+title @s[scores={timer_gold=0}] actionbar [{"translate": "cc.ab.timer.gold.1"}]
+title @s[scores={timer_gold=3}] actionbar [{"translate": "cc.ab.timer.gold.2"}]
+title @s[scores={timer_gold=6}] actionbar [{"translate": "cc.ab.timer.gold.3"}]
+title @s[scores={timer_gold=9}] actionbar [{"translate": "cc.ab.timer.gold.4"}]
+title @s[scores={timer_gold=12}] actionbar [{"translate": "cc.ab.timer.gold.5"}]
+title @s[scores={timer_gold=15}] actionbar [{"translate": "cc.ab.timer.gold.6"}]
+title @s[scores={timer_gold=18}] actionbar [{"translate": "cc.ab.timer.gold.7"}]
+title @s[scores={timer_gold=21}] actionbar [{"translate": "cc.ab.timer.gold.8"}]
+title @s[scores={timer_gold=24}] actionbar [{"translate": "cc.ab.timer.gold.9"}]
+title @s[scores={timer_gold=27}] actionbar [{"translate": "cc.ab.timer.gold.10"}]
+title @s[scores={timer_gold=30}] actionbar [{"translate": "cc.ab.timer.gold.11"}]
+title @s[scores={timer_gold=33}] actionbar [{"translate": "cc.ab.timer.gold.12"}]
+title @s[scores={timer_gold=36}] actionbar [{"translate": "cc.ab.timer.gold.13"}]
+title @s[scores={timer_gold=39}] actionbar [{"translate": "cc.ab.timer.gold.14"}]
+title @s[scores={timer_gold=42}] actionbar [{"translate": "cc.ab.timer.gold.15"}]
+title @s[scores={timer_gold=45}] actionbar [{"translate": "cc.ab.timer.gold.16"}]
+title @s[scores={timer_gold=48}] actionbar [{"translate": "cc.ab.timer.gold.17"}]
+scoreboard players add @s timer_gold 1
+give @s[scores={timer_gold=51}] minecraft:gold_ingot
+scoreboard players set @s[scores={timer_gold=51..}] timer_gold 0

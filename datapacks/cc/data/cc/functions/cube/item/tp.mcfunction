@@ -1,0 +1,20 @@
+title @s[scores={timer_tp=0}] actionbar [{"translate": "cc.ab.timer.tp.1"}]
+title @s[scores={timer_tp=4}] actionbar [{"translate": "cc.ab.timer.tp.2"}]
+title @s[scores={timer_tp=8}] actionbar [{"translate": "cc.ab.timer.tp.3"}]
+title @s[scores={timer_tp=12}] actionbar [{"translate": "cc.ab.timer.tp.4"}]
+title @s[scores={timer_tp=16}] actionbar [{"translate": "cc.ab.timer.tp.5"}]
+title @s[scores={timer_tp=20}] actionbar [{"translate": "cc.ab.timer.tp.6"}]
+title @s[scores={timer_tp=24}] actionbar [{"translate": "cc.ab.timer.tp.7"}]
+title @s[scores={timer_tp=28}] actionbar [{"translate": "cc.ab.timer.tp.8"}]
+title @s[scores={timer_tp=32}] actionbar [{"translate": "cc.ab.timer.tp.9"}]
+title @s[scores={timer_tp=36}] actionbar [{"translate": "cc.ab.timer.tp.10"}]
+title @s[scores={timer_tp=40}] actionbar [{"translate": "cc.ab.timer.tp.11"}]
+title @s[scores={timer_tp=44}] actionbar [{"translate": "cc.ab.timer.tp.12"}]
+title @s[scores={timer_tp=48}] actionbar [{"translate": "cc.ab.timer.tp.13"}]
+title @s[scores={timer_tp=52}] actionbar [{"translate": "cc.ab.timer.tp.14"}]
+title @s[scores={timer_tp=56}] actionbar [{"translate": "cc.ab.timer.tp.15"}]
+title @s[scores={timer_tp=60}] actionbar [{"translate": "cc.ab.timer.tp.16"}]
+title @s[scores={timer_tp=64}] actionbar [{"translate": "cc.ab.timer.tp.17"}]
+scoreboard players add @s timer_tp 1
+execute as @s[scores={timer_tp=68}] at @e[type=minecraft:area_effect_cloud,scores={cube_type=10},sort=furthest,limit=1] run tp @s ~ ~2 ~
+scoreboard players set @s[scores={timer_tp=68..}] timer_tp 0

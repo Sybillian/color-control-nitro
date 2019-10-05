@@ -26,3 +26,26 @@ team modify spec color dark_gray
 team modify spec friendlyFire false
 team modify spec collisionRule never
 team modify spec nametagVisibility hideForOtherTeams
+
+scoreboard objectives add cube_type dummy
+scoreboard objectives add player_state dummy
+scoreboard objectives add blocks_exposed dummy
+scoreboard objectives add broke_b_concrete dummy
+scoreboard objectives add broke_r_concrete dummy
+scoreboard objectives add broke_w_concrete dummy
+scoreboard objectives add broke_concrete dummy
+scoreboard objectives add health health
+scoreboard objectives add use_coas minecraft.used:minecraft.carrot_on_a_stick
+
+scoreboard objectives add timer_wood dummy
+scoreboard objectives add timer_stone dummy
+scoreboard objectives add timer_iron dummy
+scoreboard objectives add timer_bow dummy
+scoreboard objectives add timer_arrow dummy
+scoreboard objectives add timer_gold dummy
+scoreboard objectives add timer_jump dummy
+scoreboard objectives add timer_fireball dummy
+scoreboard objectives add timer_totem dummy
+scoreboard objectives add timer_tnt dummy
+scoreboard objectives add timer_tp dummy
+scoreboard objectives add timer_diamond dummy
