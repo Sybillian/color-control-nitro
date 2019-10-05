@@ -27,6 +27,18 @@ team modify spec friendlyFire false
 team modify spec collisionRule never
 team modify spec nametagVisibility hideForOtherTeams
 
+team add red_points
+team modify red_points color red
+team modify red_points prefix {"translate":"cc.team.red"}
+
+team add blue_points
+team modify blue_points color blue
+team modify blue_points prefix {"translate":"cc.team.blue"}
+
+scoreboard objectives add game_data dummy
+scoreboard objectives add settings dummy
+
+scoreboard objectives add points dummy {"translate": "cc.score.points"}
 scoreboard objectives add cube_type dummy
 scoreboard objectives add player_state dummy
 scoreboard objectives add blocks_exposed dummy
@@ -49,3 +61,14 @@ scoreboard objectives add timer_totem dummy
 scoreboard objectives add timer_tnt dummy
 scoreboard objectives add timer_tp dummy
 scoreboard objectives add timer_diamond dummy
+
+scoreboard players set game_time settings 18000
+scoreboard players set half_time settings 9000
+
+scoreboard players set game_mode game_data 0
+
+team join red_points §c
+team join blue_points §9
+
+scoreboard players set §c points 0
+scoreboard players set §9 points 0
