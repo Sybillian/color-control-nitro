@@ -1,0 +1,1 @@
+loot replace entity @s armor.feet loot cc:blue_armor
