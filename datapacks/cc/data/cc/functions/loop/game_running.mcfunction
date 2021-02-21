@@ -2,8 +2,8 @@
 execute if score sudden_death game_data matches 1 run function cc:loop/sudden_death
 
 execute as @a[scores={player_state=1}] run function cc:loop/player_ingame
-execute at @e[type=minecraft:area_effect_cloud,tag=cube_core] if blocks ~1 ~1 ~1 ~-1 ~1 ~-1 17 51 17 masked positioned ~-2 ~1 ~-2 run tag @a[team=red,dx=3,dy=2,dz=3] add collecting
-execute at @e[type=minecraft:area_effect_cloud,tag=cube_core] if blocks ~1 ~1 ~1 ~-1 ~1 ~-1 -19 51 -19 masked positioned ~-2 ~1 ~-2 run tag @a[team=blue,dx=3,dy=2,dz=3] add collecting
+execute at @e[type=minecraft:area_effect_cloud,tag=cube_core] if blocks ~ ~1 ~ ~-1 ~1 ~-1 17 51 17 masked positioned ~-2 ~1 ~-2 run tag @a[team=red,dx=3,dy=2,dz=3] add collecting
+execute at @e[type=minecraft:area_effect_cloud,tag=cube_core] if blocks ~ ~1 ~ ~-1 ~1 ~-1 -19 51 -19 masked positioned ~-2 ~1 ~-2 run tag @a[team=blue,dx=3,dy=2,dz=3] add collecting
 execute as @a[tag=!collecting,scores={player_state=1}] run function cc:player/clear_collect
 tag @a remove collecting
 
@@ -17,12 +17,17 @@ scoreboard players set @a[scores={broke_w_concrete=1..}] broke_w_concrete 0
 scoreboard players set @a[scores={broke_b_concrete=1..}] broke_b_concrete 0
 scoreboard players set @a[scores={broke_r_concrete=1..}] broke_r_concrete 0
 
+execute as @e[type=minecraft:armor_stand,tag=cube_display] at @s run tp @s ~ ~ ~ ~1 ~
+
 ## Spawn protection
-fill 16 51 7 19 48 10 minecraft:red_concrete replace minecraft:air
-fill 17 50 11 18 49 15 minecraft:red_concrete replace minecraft:air
-fill 19 48 16 16 51 19 minecraft:red_concrete replace minecraft:air
-fill 15 50 18 11 49 17 minecraft:red_concrete replace minecraft:air
-fill 10 48 16 7 51 19 minecraft:red_concrete replace minecraft:air
+setblock 18 49 18 minecraft:structure_block[mode=load]{metadata:"",mirror:"NONE",ignoreEntities:1b,powered:0b,seed:0L,author:"Sybillian",rotation:"NONE",posX:-11,mode:"LOAD",posY:-1,sizeX:15,posZ:-11,integrity:1.0f,showair:0b,name:"minecraft:red_spawn",sizeY:7,sizeZ:15,showboundingbox:1b}
+setblock 18 50 18 minecraft:redstone_block
+# fill 16 51 7 19 48 10 minecraft:red_concrete replace minecraft:air
+# fill 17 50 11 18 49 15 minecraft:red_concrete replace minecraft:air
+# fill 19 48 16 16 51 19 minecraft:red_concrete replace minecraft:air
+# fill 15 50 18 11 49 17 minecraft:red_concrete replace minecraft:air
+# fill 10 48 16 7 51 19 minecraft:red_concrete replace minecraft:air
+kill @e[type=minecraft:item,nbt={Item:{id:"minecraft:wooden_pickaxe",tag:{Unbreakable:1b}}}]
 data remove block -22 53 -19 Items[{id:"minecraft:wooden_pickaxe"}]
 data remove block 21 53 18 Items[{id:"minecraft:wooden_pickaxe"}]
 execute if block -22 53 -19 minecraft:air run kill @e[type=minecraft:item,nbt={Item:{tag:{BlockEntityTag:{CustomName:'{"translate":"cc.team_chest"}'}}}}]

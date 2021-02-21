@@ -25,4 +25,6 @@ execute if entity @s[x=-2,y=49,z=-2,dx=3,dy=2,dz=3] run effect give @s minecraft
 ## Replace equipment
 function cc:player/set_armor
 execute if score combat settings matches 1 run function cc:player/set_old_combat
-give @s[nbt=!{Inventory:[{id:"minecraft:wooden_pickaxe"}]},nbt=!{Inventory:[{id:"minecraft:stone_pickaxe"}]},nbt=!{Inventory:[{id:"minecraft:golden_pickaxe"}]},nbt=!{Inventory:[{id:"minecraft:iron_pickaxe"}]},nbt=!{Inventory:[{id:"minecraft:diamond_pickaxe"}]}] minecraft:wooden_pickaxe{Unbreakable:1b,Enchantments:[{id:"minecraft:efficiency",lvl:1s},{id:"minecraft:vanishing_curse",lvl:1s}]}
+give @s[tag=no_pick] minecraft:wooden_pickaxe{Unbreakable:1b,Enchantments:[{id:"minecraft:efficiency",lvl:1s},{id:"minecraft:vanishing_curse",lvl:1s}]}
+tag @s remove no_pick
+tag @s[nbt=!{Inventory:[{id:"minecraft:wooden_pickaxe"}]},nbt=!{Inventory:[{id:"minecraft:stone_pickaxe"}]},nbt=!{Inventory:[{id:"minecraft:golden_pickaxe"}]},nbt=!{Inventory:[{id:"minecraft:iron_pickaxe"}]},nbt=!{Inventory:[{id:"minecraft:diamond_pickaxe"}]}] add no_pick
